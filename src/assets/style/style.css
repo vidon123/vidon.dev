@@ -52,7 +52,7 @@ header>nav>ul>li>a:hover {
 
 /* HOME */
 .home-background {
-    background: url(../cssImages/background.jpg) no-repeat center;
+    background: url(../images/background.jpg) no-repeat center;
     width: 100%;
     height: 63.5vh;
 }
@@ -161,8 +161,12 @@ h1.title {
     background: #ee6767;
 }
 
-.skill-element>progress.js::-webkit-progress-value {
+.skill-element>progress.javascript::-webkit-progress-value {
     background: #eecc67;
+}
+
+.skill-element>progress.php::-webkit-progress-value {
+    background: #9667ee;
 }
 /* END SKILLS */
 
@@ -215,3 +219,15 @@ footer>a {
     transition: opacity 150ms linear;
 }
 /* END REACT TRANSITION */
+
+/* ICONS */
+.icon-love:before {
+    content: '';
+    background: url(../images/emotes/unilove.svg);
+    background-size: cover;
+    position: absolute;
+    width: 29px;
+    height: 30px;
+    margin-left: 6px;
+}
+/* END ICONS */

@@ -16,7 +16,7 @@ export default class Home extends Component {
                     <img src={`${process.env.PUBLIC_URL}/images/profile.jpg`} alt="ProfilePicture" />
                     <p>
                         I'm Mattéo, I'm a french developer since my 13 years old. I love particulary web developement and I like use javascript frameworks.
-                        I also like animes and music. I also love Suwaa 💕
+                        I also like animes and music. I also love Suwaa <span className="icon icon-love"/>
                     </p>
                 </div>
             </div>

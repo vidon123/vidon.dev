@@ -2,6 +2,22 @@ import React, { Component } from 'react';
 
 export default class Skills extends Component {
 
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            skills_front: [
+                { name: "html", pourcent: 80 },
+                { name: "css", pourcent: 80 },
+                { name: "javascript", pourcent: 60 },
+            ],
+            skills_back: [
+                { name: "php", pourcent: 50 },
+                { name: "javascript", pourcent: 70 }
+            ]
+        }
+    }
+
     render() {
         return (
             <div>
@@ -11,20 +27,23 @@ export default class Skills extends Component {
                     <h2 className="subtitle">Front-end</h2>
 
                     <div className="skills-element">
-                        <div className="skill-element">
-                            <h2>html <span>80%</span></h2>
-                            <progress className="html" value="80" max="100" />
-                        </div>
+                        {this.state.skills_front.map(item =>
+                            <div className="skill-element">
+                                <h2>{item.name} <span>{item.pourcent}%</span></h2>
+                                <progress className={item.name} value={item.pourcent} max="100" />
+                            </div>
+                        )}
+                    </div>
 
-                        <div className="skill-element">
-                            <h2>css <span>80%</span></h2>
-                            <progress className="css" value="80" max="100" />
-                        </div>
+                    <h2 className="subtitle">Back-end</h2>
 
-                        <div className="skill-element">
-                            <h2>javascript <span>60%</span></h2>
-                            <progress className="js" value="60" max="100" />
-                        </div>
+                    <div className="skills-element">
+                        {this.state.skills_back.map(item =>
+                            <div className="skill-element">
+                                <h2>{item.name} <span>{item.pourcent}%</span></h2>
+                                <progress className={item.name} value={item.pourcent} max="100" />
+                            </div>
+                        )}
                     </div>
                 </div>
             </div>
